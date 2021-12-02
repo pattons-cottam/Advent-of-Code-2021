@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-
-string[] input = File.ReadAllLines("./puzzle_input.txt");
-
-PartOne();
+﻿PartOne();
 PartTwo();
 
 void PartOne()
 {
+    var input = File.ReadAllLines("./puzzle_input.txt");
     var previousDepth = int.Parse(input[0]);
     var measurementsIncreased = 0;
 
