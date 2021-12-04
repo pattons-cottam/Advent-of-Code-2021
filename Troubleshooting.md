@@ -1,18 +1,10 @@
 # Troubleshooting .NET 6 on Linux
-For Omnisharp support in VS Code using .NET 6 (installed via apt), some combination of the following solved [these](https://github.com/OmniSharp/omnisharp-vscode/issues/2937) two [issues](https://github.com/dotnet/sdk/issues/17461).
+For Omnisharp support in VS Code using .NET 6 (installed via apt), the following solved [these](https://github.com/OmniSharp/omnisharp-vscode/issues/2937) two [issues](https://github.com/dotnet/sdk/issues/17461).
 - Add the following environment variables to `.bashrc`:
 ```
 export MSBuildSDKsPath="/usr/share/dotnet/sdk/$(dotnet --version)/Sdks"
 export MSBuildEnableWorkloadResolver=false
 ```
-- Add the following to an `omnisharp.json` file in the root of the project:
-```
-{
-    "MSBuild": {
-        "UseLegacySdkResolver": true
-    }
- }
- ```
  
  # Current Working Version
  - VS Code, installed with the `code` package in the software center:
